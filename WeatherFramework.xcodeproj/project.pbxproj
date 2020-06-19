@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9187C168249CA21D0002901D /* WeatherFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187C15E249CA21D0002901D /* WeatherFramework.framework */; };
 		9187C16D249CA21D0002901D /* WeatherFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187C16C249CA21D0002901D /* WeatherFrameworkTests.swift */; };
 		9187C16F249CA21D0002901D /* WeatherFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 9187C161249CA21D0002901D /* WeatherFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9187C1C7249CA7660002901D /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187C1C6249CA7660002901D /* WeatherRequest.swift */; };
+		9187C1C9249CA7700002901D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9187C1C8249CA7700002901D /* Weather.swift */; };
+		9187C1DE249CAD9D0002901D /* WeatherFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9187C15E249CA21D0002901D /* WeatherFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		9187C167249CA21D0002901D /* WeatherFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9187C16C249CA21D0002901D /* WeatherFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFrameworkTests.swift; sourceTree = "<group>"; };
 		9187C16E249CA21D0002901D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9187C1C6249CA7660002901D /* WeatherRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		9187C1C8249CA7700002901D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9187C1DE249CAD9D0002901D /* WeatherFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9187C168249CA21D0002901D /* WeatherFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				9187C161249CA21D0002901D /* WeatherFramework.h */,
+				9187C1C6249CA7660002901D /* WeatherRequest.swift */,
+				9187C1C8249CA7700002901D /* Weather.swift */,
 				9187C162249CA21D0002901D /* Info.plist */,
 			);
 			path = WeatherFramework;
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					9187C15D249CA21D0002901D = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					9187C166249CA21D0002901D = {
 						CreatedOnToolsVersion = 11.5;
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9187C1C9249CA7700002901D /* Weather.swift in Sources */,
+				9187C1C7249CA7660002901D /* WeatherRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		9187C173249CA21D0002901D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -355,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.WeatherFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +374,7 @@
 		9187C174249CA21D0002901D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -386,6 +398,7 @@
 		9187C176249CA21D0002901D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -403,6 +416,7 @@
 		9187C177249CA21D0002901D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WeatherFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
